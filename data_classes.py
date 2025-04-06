@@ -5,7 +5,7 @@ class Person:
         self.name =name
         self.age = age 
         self.email = email
-
+#class caontin the studnet information 
 class Student(Person):
     def __init__(self, name, age, email, student_id):
         super().__init__(name, age, email)
@@ -19,12 +19,12 @@ class Student(Person):
         "student_id":self.student_id
         }
         return data
-    
+    # function to save the student 
     def save_to_json(self, filename):
         Student_dict = self .to_dict()
         with open(filename, 'w') as f:
             json.dump(Student_dict,f, indent=4)
-   
+    # function to diplsay 
     def display_json(self):
         student_dict = self.to_dict()
         print(json.dumps(student_dict, indent=4))
