@@ -1,0 +1,51 @@
+{
+    "version": 1,
+    "disable_existing_loggers": false,
+    "formatters": {
+        "structure":{
+            "format": "%(asctime)s | %(name)s| %(levelname)s| %(message)s" }
+    },
+    "handlers": {
+        "stdout": {
+            "class": "logging.StreamHandler",
+            "formatter": "structure",
+            "stream":"ext://sys.stdout"
+        },
+        "file": {
+        "class": "logging.handlers.RotatingFileHandler",
+        "level": "DEBUG",
+        "formatter":"structure",
+        "filename":"app.log",
+        "maxBytes": 1000000,
+        "backupCount": 5
+        }
+
+    },
+    "loggers": {
+        "sqldb":{
+            "level": "INFO", 
+            "handlers": ["stdout", "file"],
+            "propagate": false
+            },
+        "ui":{
+            "level": "WARNING",
+            "handlers":["stdout", "file"],
+            "propagate": false
+        },
+        "frontend.js":{
+            "level": "ERROR",
+            "handlers": ["stdout", "file"],
+            "propagate": false
+        },
+        "backend.js":{
+            "level": "CRITICAL",
+            "handlers": ["stdout", "file"],
+            "propagate": false
+        },
+         "frontend.flask":{
+            "level": "ERROR",
+            "handlers": ["stdout", "file"],
+            "propagate": false
+}
+}
+}

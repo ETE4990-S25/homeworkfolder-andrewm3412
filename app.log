@@ -1,0 +1,9 @@
+2025-04-20 03:02:02,843 | frontend.js| ERROR| Uncaught TypeError: Cannot read properties of undefined
+2025-04-20 03:02:02,849 | backend.js| CRITICAL| System failure: Kernel panic triggered during file sync
+2025-04-20 03:02:02,849 | frontend.flask| ERROR|  Template rendering failed due to missing context
+2025-04-20 03:02:02,850 | sqldb| ERROR| exception message
+Traceback (most recent call last):
+  File "c:\Users\Owner\OneDrive\Documents\GitHub\homeworkfolder-andrewm3412\main.py", line 24, in main
+    1/0
+    ~^~
+ZeroDivisionError: division by zero
